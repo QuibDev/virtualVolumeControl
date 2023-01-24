@@ -5,15 +5,16 @@ import time
 import numpy as np 
 import HandTrackingModule as htm
 import math
+from comtypes import CLSCTX_ALL
 from ctypes import cast, POINTER
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
 ## webcam window
-wCam,hCam = 640,480
+wCam,hCam = 1280,1080
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3,wCam)
-cap.set(4,hCam)
+#cap.set(4,hCam)
 pTime = 0
 
  
